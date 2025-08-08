@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tree Plantation Certificate | Blue Star Theme</title>
+  <meta name="description" content="Elegant tree plantation certificate UI with editable recipient name." />
+  <link rel="canonical" href="/certificate.html" />
+  <meta property="og:title" content="Tree Plantation Certificate" />
+  <meta property="og:description" content="Elegant tree plantation certificate UI" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --brand-blue: 213 86% 32%;
+      --brand-blue-dark: 213 86% 24%;
+      --ink: 214 36% 18%;
+      --muted: 215 15% 45%;
+      --paper: 0 0% 100%;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: hsl(var(--ink));
+      background: hsl(var(--paper));
+      line-height: 1.4;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .certificate {
+      position: relative;
+      width: min(1100px, 92vw);
+      aspect-ratio: 16 / 9;
+      background: url('/lovable-uploads/36a542dd-8530-4926-9230-2a511932a566.png') center/cover no-repeat;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 18px 40px -12px rgba(0,0,0,.2);
+    }
+
+    /* Content frame ensures consistent margins on all sizes */
+    .content {
+      position: absolute;
+      inset: 4% 5% 6% 5%;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    /* Simulated Blue Star logo */
+    .logo {
+      margin-left: auto;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: hsl(var(--brand-blue));
+      color: white;
+      padding: 10px 14px;
+      border-radius: 6px;
+      font-weight: 700;
+      letter-spacing: .5px;
+      box-shadow: 0 8px 20px -8px hsl(var(--brand-blue) / .6);
+    }
+    .logo-mark {
+      width: 26px; height: 26px; border: 2px solid #fff; border-radius: 4px; position: relative; display:inline-block;
+    }
+    .logo-mark::before, .logo-mark::after {
+      content: ""; position: absolute; background: #fff; transform-origin: center;
+    }
+    .logo-mark::before { width: 2px; height: 18px; left: 50%; top: 4px; transform: translateX(-50%) rotate(45deg); }
+    .logo-mark::after { width: 14px; height: 2px; left: 6px; top: 12px; transform: rotate(45deg); }
+
+    main { text-align: center; align-self: center; }
+
+    .title {
+      margin: 18px 0 6px;
+      font-size: clamp(28px, 5.6vw, 56px);
+      font-weight: 800;
+      letter-spacing: .5px;
+      color: hsl(var(--brand-blue));
+      text-transform: uppercase;
+    }
+    .subtitle {
+      margin: 0 0 24px;
+      font-size: clamp(14px, 2.6vw, 22px);
+      letter-spacing: .3em;
+      color: hsl(var(--brand-blue));
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .presented {
+      font-size: clamp(10px, 1.8vw, 14px);
+      text-transform: uppercase;
+      letter-spacing: .25em;
+      color: hsl(var(--muted));
+      margin-top: 10px;
+    }
+
+    .name {
+      margin: 8px 0 8px;
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(28px, 5.2vw, 56px);
+      color: hsl(var(--brand-blue-dark));
+    }
+
+    .blurb {
+      margin: 6px auto 18px;
+      max-width: 780px;
+      font-size: clamp(12px, 1.6vw, 16px);
+      color: hsl(var(--muted));
+    }
+
+    .rule {
+      position: relative;
+      height: 1px;
+      background: hsl(var(--brand-blue) / .5);
+      margin: clamp(12px, 2.5vw, 24px) auto;
+      width: min(70%, 720px);
+    }
+    .rule::before, .rule::after {
+      content: ""; position: absolute; top: 50%; width: 12px; height: 12px; background: hsl(var(--brand-blue)); transform: translateY(-50%) rotate(45deg); border-radius: 2px;
+    }
+    .rule::before { left: -6px; }
+    .rule::after { right: -6px; }
+
+    footer { text-align: center; }
+    .issued {
+      color: hsl(var(--muted));
+      font-size: clamp(11px, 1.6vw, 14px);
+      margin-bottom: 6px;
+    }
+    .sign-name { font-weight: 600; margin-bottom: 4px; }
+    .sign-role { color: hsl(var(--muted)); font-size: clamp(11px, 1.6vw, 14px); }
+
+    /* Print friendly */
+    @media print {
+      body { margin: 0; }
+      .page { padding: 0; }
+      .certificate { width: 100vw; height: 100vh; aspect-ratio: auto; border-radius: 0; box-shadow: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <article class="certificate" aria-label="Tree Plantation Certificate">
+      <div class="content">
+        <header>
+          <div class="logo" aria-label="Brand logo">
+            <span class="logo-mark" aria-hidden="true"></span>
+            <span>BLUE STAR</span>
+          </div>
+        </header>
+
+        <main>
+          <h1 class="title">Tree Plantation</h1>
+          <div class="subtitle">Certificate</div>
+
+          <div class="presented">Presented To</div>
+          <div class="name">Employee Name</div>
+
+          <p class="blurb">
+            A tree has been planted in your name in recognition of your commitment to Blue Star.
+            It stands as a living symbol of our shared values and continued pursuit of
+            cultivating a healthier planet.
+          </p>
+
+          <div class="rule" aria-hidden="true"></div>
+        </main>
+
+        <footer>
+          <div class="issued">Issued by</div>
+          <div class="sign-name">Vir S Advani</div>
+          <div class="sign-role">Chairman &amp; Managing Director<br/>Blue Star Limited</div>
+        </footer>
+      </div>
+    </article>
+  </div>
+</body>
+</html>
